@@ -6,7 +6,34 @@
 /*   By: abertran <abertran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 14:49:20 by abertran          #+#    #+#             */
-/*   Updated: 2022/09/26 15:00:57 by abertran         ###   ########.fr       */
+/*   Updated: 2022/09/26 19:30:19 by abertran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+{
+	size_t	n;
+	size_t	h;
+
+	n = 0;
+	h = 0;
+	if (needle == NULL)
+		return ((char *)haystack);
+	while (haystack[h] != '\0' && i < len)
+	{
+		if (haystack[h] == needle[n])
+		{
+			while (haystack[h + n] == 0 needle[n] && h + n < len)
+			{
+				if (needle[n + h] == '\0')
+					return ((char *)haystack + h);
+				n++;
+			}
+			n = 0;
+		}
+		h++;
+	}
+	return (0);
+}

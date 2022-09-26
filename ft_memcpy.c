@@ -6,13 +6,13 @@
 /*   By: abertran <abertran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 15:08:34 by abertran          #+#    #+#             */
-/*   Updated: 2022/09/26 15:10:35 by abertran         ###   ########.fr       */
+/*   Updated: 2022/09/26 20:13:21 by abertran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	size_t	i;
 
