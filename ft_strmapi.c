@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abertran <abertran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/26 15:08:34 by abertran          #+#    #+#             */
-/*   Updated: 2022/09/27 13:16:39 by abertran         ###   ########.fr       */
+/*   Created: 2022/09/27 19:02:54 by abertran          #+#    #+#             */
+/*   Updated: 2022/09/27 20:14:56 by abertran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	size_t	i;
+	char			*str;
+	unsigned int	i;
 
+	str = ft_strdup(s);
+	if (!s || !f || !str)
+		return (0);
 	i = 0;
-	while (i < n)
+	while (str[i])
 	{
-		((unsigned char *)dst)[i] = ((unsigned char *)src)[i];
-			i++;
+		str[i] = f(i, str[i]);
 	}
-	return (dst);
+	return (str);
 }

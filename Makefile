@@ -23,7 +23,12 @@ files 	   = ft_strlen \
 			 ft_atoi \
 			 ft_calloc \
 			 ft_strdup \
-
+			 ft_substr \
+			 ft_strjoin \
+			 ft_strtrim \
+			 ft_strmapi \
+			 ft_striteri \
+			 
 Compiler	= gcc
 
 CmpFlags	= -Wall -Wextra -Werror
