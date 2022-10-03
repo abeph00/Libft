@@ -1,36 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abertran <abertran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/27 16:35:13 by abertran          #+#    #+#             */
-/*   Updated: 2022/10/03 15:50:14 by abertran         ###   ########.fr       */
+/*   Created: 2022/09/28 19:28:15 by abertran          #+#    #+#             */
+/*   Updated: 2022/09/30 16:24:27 by abertran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s1, char const *set)
+void	ft_putchar_fd(char c, int fd)
 {
-	size_t	i;
-
-	if (!s1 || !set)
-		return (0);
-	while (*s1 && ft_strchr(set, *s1))
-		s1++;
-	i = ft_strlen(s1);
-	while (i && ft_strchr(set, s1[i]))
-		i--;
-	return (ft_substr(s1, 0, i + 1));
+	write (fd, &c, 1);
 }
-/*
-int	main(void)
-{
-	char const	s1[] = "nonohola que tal";
-	char const	set[] = "hola";
-
-	printf("%s", ft_strtrim(s1, set));
-}
-*/
