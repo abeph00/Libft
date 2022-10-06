@@ -6,7 +6,7 @@
 /*   By: abertran <abertran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 15:08:06 by abertran          #+#    #+#             */
-/*   Updated: 2022/09/27 13:15:38 by abertran         ###   ########.fr       */
+/*   Updated: 2022/10/06 16:25:46 by abertran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	size_t	i;
 
 	i = 0;
+	if (!src && !dst)
+		return (0);
 	if (src < dst)
 	{
 		i = len;

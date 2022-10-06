@@ -6,7 +6,7 @@
 /*   By: abertran <abertran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 20:12:29 by abertran          #+#    #+#             */
-/*   Updated: 2022/10/03 19:20:07 by abertran         ###   ########.fr       */
+/*   Updated: 2022/10/06 13:33:50 by abertran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ typedef struct s_list
 	struct s_list	*next;
 }					t_list;
 
+t_list	*ft_lstnew(void *content);
 char	*ft_itoa(int n);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_putendl_fd(char *s, int fd);

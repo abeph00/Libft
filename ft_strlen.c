@@ -6,7 +6,7 @@
 /*   By: abertran <abertran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 14:49:34 by abertran          #+#    #+#             */
-/*   Updated: 2022/09/26 14:52:59 by abertran         ###   ########.fr       */
+/*   Updated: 2022/10/06 18:50:35 by abertran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t	ft_strlen(const char *s)
 	size_t	i;
 
 	i = 0;
-	while (s[i] != 0)
+	while (s[i] != '\0')
 		i++;
 	return (i);
 }
