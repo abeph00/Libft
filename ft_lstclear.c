@@ -1,25 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abertran <abertran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/03 19:24:15 by abertran          #+#    #+#             */
-/*   Updated: 2022/10/10 17:55:47 by abertran         ###   ########.fr       */
+/*   Created: 2022/10/10 19:01:26 by abertran          #+#    #+#             */
+/*   Updated: 2022/10/10 19:41:14 by abertran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	t_list	*new;
+	t_list	*nodo;
+	t_list	*tmp;
 
-	new = (t_list *)malloc(sizeof(t_list));
-	if (!(new))
-		return (0);
-	new->content = content;
-	new->next = NULL;
-	return (new);
+	nodo = *lst;
+	while (nodo)
+	{
+		tmp = nodo->next;
+		del(nodo->content);
+		free(nodo);
+		nodo = tmp;
+	}
+	*lst = NULL;
 }
