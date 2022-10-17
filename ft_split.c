@@ -6,7 +6,7 @@
 /*   By: abertran <abertran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 17:12:52 by abertran          #+#    #+#             */
-/*   Updated: 2022/09/28 19:18:20 by abertran         ###   ########.fr       */
+/*   Updated: 2022/10/14 18:29:59 by abertran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,3 +69,11 @@ char	**ft_split(char const *s, char c)
 	split[j] = 0;
 	return (split);
 }
+
+/*
+int main(void)
+{
+  char const s[] = "hola que tal estas";
+  printf("%s", ft_split(s,' '));
+}
+*/

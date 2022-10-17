@@ -6,7 +6,7 @@
 /*   By: abertran <abertran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 13:44:39 by abertran          #+#    #+#             */
-/*   Updated: 2022/10/06 19:00:48 by abertran         ###   ########.fr       */
+/*   Updated: 2022/10/12 14:34:46 by abertran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,3 +30,11 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	ft_strlcpy(ptr, (char *)(s + start), len + 1);
 	return (ptr);
 }
+/*
+int	main(void)
+{
+	char const	s[] = "oftalmologo";
+
+	printf("%s", ft_substr(s, 1, 3));
+}
+*/

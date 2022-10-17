@@ -6,15 +6,11 @@
 /*   By: abertran <abertran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 12:52:17 by abertran          #+#    #+#             */
-/*   Updated: 2022/09/26 13:00:38 by abertran         ###   ########.fr       */
+/*   Updated: 2022/10/11 17:53:21 by abertran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-/* Añade src al final de dst. Concatena strings con una longitud limitada y lo
-termina en NULL siempre que el dstsize sea mayor a el string original de dst.
-Retorna la longitud del string que esta tratando crear. */
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
