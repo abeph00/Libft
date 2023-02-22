@@ -6,7 +6,7 @@
 /*   By: abertran <abertran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 17:12:52 by abertran          #+#    #+#             */
-/*   Updated: 2022/10/14 18:29:59 by abertran         ###   ########.fr       */
+/*   Updated: 2022/10/18 17:26:47 by abertran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,25 +36,21 @@ static char	*word_dup(const char *str, int start, int finish)
 
 	i = 0;
 	word = malloc((finish - start + 1) * sizeof(char));
+	if (!word)
+		return (NULL);
 	while (start < finish)
 		word[i++] = str[start++];
 	word[i] = '\0';
 	return (word);
 }
 
-char	**ft_split(char const *s, char c)
+static char	*ft_cpy(size_t i, char const *s, char c, char **split)
 {
-	size_t	i;
-	size_t	j;
 	int		index;
-	char	**split;
+	size_t	j;
 
-	split = malloc((countwords(s, c) + 1) * sizeof(char *));
-	if (!s || !(split))
-		return (0);
-	i = 0;
-	j = 0;
 	index = -1;
+	j = 0;
 	while (i <= ft_strlen(s))
 	{
 		if (s[i] != c && index < 0)
@@ -67,6 +63,21 @@ char	**ft_split(char const *s, char c)
 		i++;
 	}
 	split[j] = 0;
+	return (split[j]);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	size_t	i;
+	char	**split;
+
+	if (!s)
+		return (NULL);
+	split = malloc((countwords(s, c) + 1) * sizeof(char *));
+	if (!split)
+		return (NULL);
+	i = 0;
+	ft_cpy(i, s, c, split);
 	return (split);
 }
 

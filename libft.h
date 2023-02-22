@@ -6,7 +6,7 @@
 /*   By: abertran <abertran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 20:12:29 by abertran          #+#    #+#             */
-/*   Updated: 2022/10/10 20:20:37 by abertran         ###   ########.fr       */
+/*   Updated: 2022/10/18 16:36:10 by abertran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <stdio.h>
+# include <limits.h>
+# include <string.h>
 
 typedef struct s_list
 {

@@ -6,18 +6,21 @@
 /*   By: abertran <abertran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 18:02:01 by abertran          #+#    #+#             */
-/*   Updated: 2022/10/12 14:36:19 by abertran         ###   ########.fr       */
+/*   Updated: 2022/10/18 17:25:57 by abertran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/* asigna memoria y la inicializa y rellena con zero */
+
 void	*ft_calloc(size_t count, size_t size)
+/*cantidad de elementos y tamaño */
 {
 	char	*ptr;
 
-	if (count == 0 || size == 0)
-		return (malloc(0));
+	if (count && ((SIZE_MAX / count) < size))
+		return (NULL);
 	ptr = malloc (count * size);
 	if (!ptr)
 		return (NULL);

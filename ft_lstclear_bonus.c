@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abertran <abertran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 19:01:26 by abertran          #+#    #+#             */
-/*   Updated: 2022/10/10 19:41:14 by abertran         ###   ########.fr       */
+/*   Updated: 2022/10/18 18:35:39 by abertran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/* elimina y libera todos los elementos de la lista */
+
 void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	t_list	*nodo;
 	t_list	*tmp;
 
-	nodo = *lst;
-	while (nodo)
+	if (!lst)
+		return ;
+	while (*lst != NULL)
 	{
-		tmp = nodo->next;
-		del(nodo->content);
-		free(nodo);
-		nodo = tmp;
+		tmp = (*lst)->next;
+		ft_lstdelone(*lst, del);
+		*lst = tmp;
 	}
-	*lst = NULL;
 }

@@ -6,11 +6,14 @@
 /*   By: abertran <abertran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 15:01:18 by abertran          #+#    #+#             */
-/*   Updated: 2022/09/26 19:58:10 by abertran         ###   ########.fr       */
+/*   Updated: 2022/10/18 18:19:57 by abertran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/* asigna memoria suficiente para una copia de *s,
+hace la copia y devuelve un puntero*/
 
 char	*ft_strdup(const char *s1)
 {

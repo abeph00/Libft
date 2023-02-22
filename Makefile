@@ -55,26 +55,23 @@ BONUS_OBJ = $(BONUS:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	@ar rcs $(NAME) $(OBJ)
+	ar -rcs $(NAME) $(OBJ)
 	@echo "$(NAME) created"
-	@ranlib $(NAME)
-	@echo "$(NAME) indexed"
 
 %.o: %.c
-	@gcc $(FLAG) -c $< -o $@
+	gcc $(FLAG) -c $< -o $@
 
 clean:
-	@rm -f $(OBJ) $(BONUS_OBJ)
-
+	rm -f $(OBJ) $(BONUS_OBJ)
 	@echo "OBJ deleted"
 
 fclean: clean
-	@rm -f $(NAME)
+	rm -f $(NAME)
 	@echo "$(NAME) deleted"
 
 re: fclean all
 
-bonus: $(OBJ) $(BONUS_OBJ)
-		ar rcs $(NAME) $(OBJ) $(BONUS_OBJ)
+bonus: $(NAME) $(BONUS_OBJ)
+	ar -rcs $(NAME) $(BONUS_OBJ)
 
 .PHONY: all, clean, fclean, re, bonus

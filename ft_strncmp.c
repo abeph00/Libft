@@ -6,7 +6,7 @@
 /*   By: abertran <abertran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 13:30:12 by abertran          #+#    #+#             */
-/*   Updated: 2022/09/26 14:51:21 by abertran         ###   ########.fr       */
+/*   Updated: 2022/10/19 12:52:36 by abertran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,3 +28,13 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return ((unsigned char)(s1[i]) - (unsigned char)(s2[i]));
 }
+/*
+int	main(void)
+{
+	char	s1[] = "colah";
+	char	s2[] = "hocac";
+
+	printf("mia :%d\n", ft_strncmp(s1, s2, 4));
+	printf("original:%d\n", strncmp(s1, s2, 4));
+}
+*/

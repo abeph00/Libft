@@ -6,18 +6,19 @@
 /*   By: abertran <abertran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 12:52:17 by abertran          #+#    #+#             */
-/*   Updated: 2022/10/11 17:53:21 by abertran         ###   ########.fr       */
+/*   Updated: 2022/10/18 15:13:05 by abertran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/* Copia y concatena strings */
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	c;
 	size_t	d;
 
-	if (dstsize <= ft_strlen(dst))
+	if (dstsize == 0 || dstsize <= ft_strlen(dst))
 		return (dstsize + ft_strlen(src));
 	c = ft_strlen(dst);
 	d = 0;
