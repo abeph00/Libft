@@ -10,7 +10,7 @@
 
 ## 🗣️
 
-> _On this project we will create our own C library. We will recreate usual functions that you'll be allowed to use in all your other projects.
+> _On this project we will create our own C library. We will recreate usual functions that you'll be allowed to use in all your other projects. <br>
   _En este proyecto crearemos nuestra propia libreria, recrearemos funciones tipicas de c que podremos usar en proyectos futuros.
 
 ## 📖
